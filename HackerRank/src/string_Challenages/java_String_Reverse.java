@@ -34,13 +34,13 @@ public static void main(String[] args) {
         // reverse string finalReverseString
         finalReverseString = finalReverseString.reverse();
         
+        // converted stringBuilder to string so I could compare string
         String cake = finalReverseString.toString();
         
-        
-        
-        
+       
         //using the string.equals methods to compare content of both objects A and finalReverseString
         // using == will only checks if both string objects use the same memory location
+        // if (A.equals(finalReverseString)) {  //This is for the code using bytes to reverse string.
         if (A.equals(cake)) {
         	System.out.println("Yes");
         	
