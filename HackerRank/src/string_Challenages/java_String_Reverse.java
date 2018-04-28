@@ -26,6 +26,8 @@ public static void main(String[] args) {
         String finalReverseString = new String(result);
         */
         
+        //Reverse a string by using the StringBuilder.
+        
         StringBuilder finalReverseString = new StringBuilder();
         
         // append a string into StringBuilder finalReverseString
