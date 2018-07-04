@@ -11,15 +11,18 @@ public class java_Regex_2 {
 		    // Write a RegEx that will match any repeated word.
 	        String regex = "\\b(\\w+)(\\b\\W+\\b\\1\\b)*";
 	        
-
+	        // added case insensitive regex matching
 	        Pattern p = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
 
 	        Scanner in = new Scanner(System.in);
+	        
+	        //parse a string as a decimal integer
 	        int numSentences = Integer.parseInt(in.nextLine());
 	        
 	        while (numSentences-- > 0) {
 	            String input = in.nextLine();
 	            
+	            //matches sequence 
 	            Matcher m = p.matcher(input);
 	            
 	            // Check for subsequences of input that match the compiled pattern
