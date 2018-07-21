@@ -1,10 +1,14 @@
 package chessGame;
 
 public class Pawn {
+	private String colour;
 
+	public Pawn(String colour) {
+		this.colour = colour;
+	}
 
-	public static String askPawnColour() {
-		// TODO Auto-generated method stub
-		return "white";
+	String getColourOfPawn() {
+		return colour;
+
 	}
 }

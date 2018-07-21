@@ -2,9 +2,14 @@ package chessGame;
 
 public class PawnTest extends junit.framework.TestCase {
 	public void testCreate() {
-		Pawn pawn = new Pawn();
-		Pawn.askPawnColour();
-		assertEquals("white", Pawn.askPawnColour());
+
+		final String chosenColourFirstPawn = "white";
+		Pawn firstPawn = new Pawn(chosenColourFirstPawn);
+		assertEquals(chosenColourFirstPawn, firstPawn.getColourOfPawn());
+
+		final String chosenColourSecondPawn = "black";
+		Pawn secondPawn = new Pawn(chosenColourSecondPawn);
+		assertEquals(chosenColourSecondPawn, secondPawn.getColourOfPawn());
 	}
 
 }
