@@ -1,4 +1,4 @@
-package student_test;
+package lesson2;
 
 public class StudentTest extends junit.framework.TestCase {
 	public void testCreate() {
