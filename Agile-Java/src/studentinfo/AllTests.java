@@ -1,4 +1,4 @@
-package lesson2;
+package studentinfo;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;

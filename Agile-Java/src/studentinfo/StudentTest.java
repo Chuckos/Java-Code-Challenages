@@ -1,6 +1,8 @@
-package lesson2;
+package studentinfo;
 
-public class StudentTest extends junit.framework.TestCase {
+import junit.framework.TestCase;
+
+public class StudentTest extends TestCase {
 	public void testCreate() {
 		final String firstStudentName = "Joe Doe";
 		Student firststudent = new Student(firstStudentName);
