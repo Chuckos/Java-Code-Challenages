@@ -2,6 +2,7 @@ package chessGame;
 
 public class Pawn {
 	private String colour;
+	private static final String white = "white";
 
 	public Pawn(String colour) {
 		this.colour = colour;
@@ -11,4 +12,9 @@ public class Pawn {
 		return colour;
 
 	}
+
+	public Pawn() {
+		this.colour = white;
+	}
+
 }
