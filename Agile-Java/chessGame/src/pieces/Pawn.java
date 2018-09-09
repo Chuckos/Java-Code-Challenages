@@ -1,4 +1,4 @@
-package chessGame;
+package pieces;
 
 /**
  * @author charlesadeeko Class that creates chess pieces for a chess board game
@@ -11,7 +11,7 @@ public class Pawn {
 	/**
 	 * Constructs the colour of the pawn pieces
 	 */
-	
+
 	public Pawn(String colour) {
 		this.colour = colour;
 	}
@@ -19,12 +19,12 @@ public class Pawn {
 	/**
 	 * Method that returns the colour of pawn object
 	 */
-	
-	String getColourOfPawn() {
+
+	public String getColourOfPawn() {
 		return colour;
 
 	}
-	
+
 	/**
 	 * Constructs default pawn objects to colour white
 	 */
