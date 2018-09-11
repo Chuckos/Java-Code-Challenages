@@ -31,13 +31,13 @@ public class CourseSessionTest extends TestCase {
 		assertEquals(student1, session.get(0));
 		assertEquals(student2, session.get(1));
 	}
-	
+
 	public void testCourseDates() {
 		Date sixteenWeeksOut = createDate(2003, 4, 25);
 		assertEquals(sixteenWeeksOut, session.getEndDate());
-		
+
 	}
-	
+
 	Date createDate(int year, int month, int date) {
 		GregorianCalendar calendar = new GregorianCalendar();
 		calendar.clear();
