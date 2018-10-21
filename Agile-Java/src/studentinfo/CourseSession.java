@@ -14,9 +14,17 @@ class CourseSession {
 	private ArrayList<Student> students = new ArrayList<Student>();
 	private Date startDate;
 
+	static final String NEWLINE = System.getProperty("line.separator");
+	static final String ROSTER_REPORT_HEADER = "Student" + NEWLINE + "----" + NEWLINE;
+	static final String ROSTER_REPORT_FOOTER = NEWLINE + "# students =";
+
 	CourseSession(String department, String number) {
 		this.department = department;
 		this.number = number;
+	}
+	
+	ArrayList<Student> getAllStudents(){
+		return students;
 	}
 
 	/**
@@ -67,6 +75,29 @@ class CourseSession {
 		int numberOfDays = sessionLength * daysInWeek - daysFromFridayToMonday;
 		calendar.add(Calendar.DAY_OF_YEAR, numberOfDays);
 		return calendar.getTime();
+	}
+
+	String getRosterReport() {
+		StringBuilder buffer = new StringBuilder();
+
+		buffer.append(ROSTER_REPORT_HEADER);
+
+		for (Student student : students) {
+			buffer.append(student.getName());
+			buffer.append(NEWLINE);
+		}
+
+		/*
+		 * Student student = students.get(0); buffer.append(student.getName());
+		 * buffer.append(NEWLINE);
+		 * 
+		 * student = students.get(1); buffer.append(student.getName());
+		 * buffer.append(NEWLINE);
+		 */
+
+		buffer.append(ROSTER_REPORT_FOOTER + students.size() + NEWLINE);
+
+		return buffer.toString();
 	}
 
 }

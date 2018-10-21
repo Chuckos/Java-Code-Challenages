@@ -8,7 +8,7 @@ public class CourseSessionTest extends TestCase {
 	private Date startDate;
 
 	public void setUp() {
-		startDate = createDate(2003, 1, 6);
+		startDate = new DateUtil().createDate(2003, 1, 6);
 		session = new CourseSession("ENGL", "101", startDate);
 	}
 
@@ -33,7 +33,7 @@ public class CourseSessionTest extends TestCase {
 	}
 
 	public void testCourseDates() {
-		Date sixteenWeeksOut = createDate(2003, 4, 25);
+		Date sixteenWeeksOut = new DateUtil().createDate(2003, 4, 25);
 		assertEquals(sixteenWeeksOut, session.getEndDate());
 
 	}
@@ -46,4 +46,17 @@ public class CourseSessionTest extends TestCase {
 		calendar.set(Calendar.DAY_OF_MONTH, date);
 		return calendar.getTime();
 	}
+	
+	public void testRosterReport() {
+		session.enroll(new Student("A"));
+		session.enroll(new Student("B"));
+		
+		String rosterReport = session.getRosterReport();
+		assertEquals(CourseSession.ROSTER_REPORT_HEADER + 
+		"A" + CourseSession.NEWLINE +
+		"B" + CourseSession.NEWLINE +
+		CourseSession.ROSTER_REPORT_FOOTER + "2" +
+		CourseSession.NEWLINE, rosterReport);
+	}
+		
 }

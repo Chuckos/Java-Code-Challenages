@@ -10,6 +10,8 @@ public class AllTests {
 		// $JUnit-BEGIN$
 		suite.addTestSuite(CourseSessionTest.class);
 		suite.addTestSuite(StudentTest.class);
+		suite.addTestSuite(RosterReporterTest.class);
+		suite.addTestSuite(DateUtilTest.class);
 		// $JUnit-END$
 		return suite;
 	}
