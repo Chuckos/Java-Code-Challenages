@@ -1,7 +1,9 @@
-package studentinfo;
+package sis.report;
 
 import junit.framework.TestCase;
+
 import java.util.*;
+import sis.studentinfo.*;
 
 public class RosterReporterTest extends TestCase {
 	public void testRosterReport() {
@@ -19,13 +21,13 @@ public class RosterReporterTest extends TestCase {
 				RosterReporter.NEWLINE, rosterReport);
 	}
 	
-	Date createDate(int year, int month, int date) {
+/*	Date createDate(int year, int month, int date) {
 		GregorianCalendar calendar = new GregorianCalendar();
 		calendar.clear();
 		calendar.set(Calendar.YEAR, year);
 		calendar.set(Calendar.MONTH, month - 1);
 		calendar.set(Calendar.DAY_OF_MONTH, date);
 		return calendar.getTime();
-	}
+	}*/
 
 }

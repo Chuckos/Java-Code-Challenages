@@ -1,4 +1,4 @@
-package studentinfo;
+package sis.studentinfo;
 
 import java.util.*;
 
@@ -8,24 +8,24 @@ import java.util.*;
  * 
  * @author Administrator
  */
-class CourseSession {
+public class CourseSession {
 	private String department;
 	private String number;
 	private ArrayList<Student> students = new ArrayList<Student>();
 	private Date startDate;
 
-	static final String NEWLINE = System.getProperty("line.separator");
-	static final String ROSTER_REPORT_HEADER = "Student" + NEWLINE + "----" + NEWLINE;
-	static final String ROSTER_REPORT_FOOTER = NEWLINE + "# students =";
+	/*
+	 * static final String NEWLINE = System.getProperty("line.separator"); static
+	 * final String ROSTER_REPORT_HEADER = "Student" + NEWLINE + "----" + NEWLINE;
+	 * static final String ROSTER_REPORT_FOOTER = NEWLINE + "# students =";
+	 */
 
-	CourseSession(String department, String number) {
-		this.department = department;
-		this.number = number;
-	}
-	
-	ArrayList<Student> getAllStudents(){
-		return students;
-	}
+	/*
+	 * public CourseSession(String department, String number, Date startDate) {
+	 * this.department = department; this.number = number; this.startDate =
+	 * startDate; }
+	 * 
+	 */
 
 	/**
 	 * Constructs a CourseSession starting on a specific date
@@ -33,7 +33,7 @@ class CourseSession {
 	 * @param startDate
 	 *            the date on which the CourseSession begins
 	 */
-	CourseSession(String department, String number, Date startDate) {
+	public CourseSession(String department, String number, Date startDate) {
 		this.department = department;
 		this.number = number;
 		this.startDate = startDate;
@@ -51,7 +51,7 @@ class CourseSession {
 		return students.size();
 	}
 
-	void enroll(Student student) {
+	public void enroll(Student student) {
 		students.add(student);
 	}
 
@@ -61,6 +61,10 @@ class CourseSession {
 
 	Date getStartDate() {
 		return startDate;
+	}
+
+	public ArrayList<Student> getAllStudents() {
+		return students;
 	}
 
 	/**
@@ -75,29 +79,6 @@ class CourseSession {
 		int numberOfDays = sessionLength * daysInWeek - daysFromFridayToMonday;
 		calendar.add(Calendar.DAY_OF_YEAR, numberOfDays);
 		return calendar.getTime();
-	}
-
-	String getRosterReport() {
-		StringBuilder buffer = new StringBuilder();
-
-		buffer.append(ROSTER_REPORT_HEADER);
-
-		for (Student student : students) {
-			buffer.append(student.getName());
-			buffer.append(NEWLINE);
-		}
-
-		/*
-		 * Student student = students.get(0); buffer.append(student.getName());
-		 * buffer.append(NEWLINE);
-		 * 
-		 * student = students.get(1); buffer.append(student.getName());
-		 * buffer.append(NEWLINE);
-		 */
-
-		buffer.append(ROSTER_REPORT_FOOTER + students.size() + NEWLINE);
-
-		return buffer.toString();
 	}
 
 }

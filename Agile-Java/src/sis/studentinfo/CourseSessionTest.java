@@ -1,4 +1,4 @@
-package studentinfo;
+package sis.studentinfo;
 
 import junit.framework.TestCase;
 import java.util.*;
@@ -38,7 +38,7 @@ public class CourseSessionTest extends TestCase {
 
 	}
 
-	Date createDate(int year, int month, int date) {
+	/*Date createDate(int year, int month, int date) {
 		GregorianCalendar calendar = new GregorianCalendar();
 		calendar.clear();
 		calendar.set(Calendar.YEAR, year);
@@ -46,17 +46,5 @@ public class CourseSessionTest extends TestCase {
 		calendar.set(Calendar.DAY_OF_MONTH, date);
 		return calendar.getTime();
 	}
-	
-	public void testRosterReport() {
-		session.enroll(new Student("A"));
-		session.enroll(new Student("B"));
-		
-		String rosterReport = session.getRosterReport();
-		assertEquals(CourseSession.ROSTER_REPORT_HEADER + 
-		"A" + CourseSession.NEWLINE +
-		"B" + CourseSession.NEWLINE +
-		CourseSession.ROSTER_REPORT_FOOTER + "2" +
-		CourseSession.NEWLINE, rosterReport);
-	}
-		
+	*/		
 }
