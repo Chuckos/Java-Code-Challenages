@@ -5,7 +5,6 @@ import java.util.*;
 /**
  * Provides a representation of a single-semester session of a specific
  * university course
- * 
  * @author Administrator
  */
 public class CourseSession {
@@ -14,25 +13,13 @@ public class CourseSession {
 	private ArrayList<Student> students = new ArrayList<Student>();
 	private Date startDate;
 
-	/*
-	 * static final String NEWLINE = System.getProperty("line.separator"); static
-	 * final String ROSTER_REPORT_HEADER = "Student" + NEWLINE + "----" + NEWLINE;
-	 * static final String ROSTER_REPORT_FOOTER = NEWLINE + "# students =";
-	 */
-
-	/*
-	 * public CourseSession(String department, String number, Date startDate) {
-	 * this.department = department; this.number = number; this.startDate =
-	 * startDate; }
-	 * 
-	 */
 
 	/**
 	 * Constructs a CourseSession starting on a specific date
 	 * 
-	 * @param startDate
-	 *            the date on which the CourseSession begins
+	 * @param startDate the date on which the CourseSession begins
 	 */
+	
 	public CourseSession(String department, String number, Date startDate) {
 		this.department = department;
 		this.number = number;
